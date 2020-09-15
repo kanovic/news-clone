@@ -1,0 +1,300 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  border-radius: 10px;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 75px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+nav {
+  width: 100%;
+  max-width: 990px;
+  min-width: 280px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+nav img {
+  height: 50px;
+  width: 50px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  height: 3px;
+  width: 30px;
+  background: rgb(54, 54, 54);
+  margin: 8px;
+
+}
+
+.nav-tech:hover {
+  background: rgba(0, 0, 255, 0.1);
+  transition: 0.2s;
+}
+
+.nav-finance:hover {
+  background: rgba(255, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.nav-sports:hover {
+  background: rgba(0, 255, 0, 0.1);
+  transition: 0.2s;
+}
+
+.nav-media:hover {
+  background: rgba(255, 165, 0, 0.1);
+  transition: 0.2s;
+}
+
+.nav-tech {
+  text-decoration: none;
+  color: blue;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.nav-finance {
+  text-decoration: none;
+  color: red;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.nav-sports {
+  text-decoration: none;
+  color: green;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.nav-media {
+  text-decoration: none;
+  color: orange;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.section-tech {
+  background: blue;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.section-finance {
+  background: red;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.section-sports {
+  background: green;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.section-media {
+  background: orange;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.section-tech:hover {
+  background: rgba(0, 0, 255, 0.1);
+  color: blue;
+  transition: 0.2s;
+}
+
+.section-finance:hover {
+  background: rgba(255, 0, 0, 0.1);
+  color: red;
+  transition: 0.2s;
+}
+
+.section-sports:hover {
+  background: rgba(0, 128, 0, 0.1);
+  color: green;
+  transition: 0.2s;
+}
+
+.section-media:hover {
+  background: rgba(255, 165, 0, 0.1);
+  color: orange;
+  transition: 0.2s;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  max-width: 990px;
+  min-width: 280px;
+  padding: 1rem;
+}
+
+section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  margin: 1rem 0;
+}
+
+section li img {
+  width: 20%;
+  height: 100%;
+  margin: 0 1rem 0 0;
+}
+
+section li:first-child {
+  position: relative;
+}
+
+section li:first-child img {
+  width: 100%;
+}
+
+section li:first-child p {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px #000000;
+  padding: 10px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 -5px 5px -5px grey;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+@media screen and (max-width:500px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  section li p {
+    font-size: 0.9rem;
+  }
+
+  section li:first-child p {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 20vh;
+    top: 80px;
+    width: 30%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .nav-media:hover {
+    background: rgba(255, 165, 0, 0.1);
+    transition: 0.2s;
+  }
+
+
+
+  .burger {
+    display: block;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
